@@ -277,7 +277,7 @@
   // ============================================================
   // 7. INTERACTIVE 3D GLASS CARD TILT & SHINE EFFECT
   // ============================================================
-  const interactiveCards = document.querySelectorAll('.feature-info, .glass-card');
+  const interactiveCards = document.querySelectorAll('.feature-info, .glass-card:not(.legal-content-card)');
   
   interactiveCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
