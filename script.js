@@ -277,7 +277,7 @@
   // ============================================================
   // 7. INTERACTIVE 3D GLASS CARD TILT & SHINE EFFECT
   // ============================================================
-  const interactiveCards = document.querySelectorAll('.feature-info, .glass-card:not(.legal-content-card)');
+  const interactiveCards = document.querySelectorAll('.feature-info, .glass-card:not(.legal-content-card):not(.flip-card-front):not(.flip-card-back)');
   
   interactiveCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
@@ -340,11 +340,11 @@
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 0.9 + 0.2;
-        this.speedX = Math.random() * 0.15 - 0.075;
-        this.speedY = Math.random() * 0.15 - 0.075;
-        this.alpha = Math.random() * 0.3 + 0.05;
-        this.fadeDir = Math.random() > 0.5 ? 0.003 : -0.003;
+        this.size = Math.random() * 1.4 + 0.3;
+        this.speedX = Math.random() * 0.4 - 0.2;
+        this.speedY = Math.random() * 0.4 - 0.2;
+        this.alpha = Math.random() * 0.5 + 0.15;
+        this.fadeDir = Math.random() > 0.5 ? 0.005 : -0.005;
         this.color = Math.random() > 0.6 
           ? '155, 77, 255' // Purple
           : (Math.random() > 0.5 ? '74, 144, 226' : '255, 255, 255'); // Blue or White
@@ -363,7 +363,7 @@
 
         // Pulse alpha (so they twinkle like real stars!)
         this.alpha += this.fadeDir;
-        if (this.alpha > 0.35 || this.alpha < 0.05) {
+        if (this.alpha > 0.65 || this.alpha < 0.1) {
           this.fadeDir = -this.fadeDir;
         }
 
