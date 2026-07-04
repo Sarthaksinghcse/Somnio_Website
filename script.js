@@ -605,12 +605,8 @@
 
     // Animation Loop
     function updateCursor() {
-      // Lerp for smooth comet delay
-      const dx = mouseX - headX;
-      const dy = mouseY - headY;
-
-      headX += dx * 0.15; // Inertia factor (lower = smoother comet delay)
-      headY += dy * 0.15;
+      headX = mouseX;
+      headY = mouseY;
 
       // Update comet head position
       cometHead.style.transform = `translate3d(${headX}px, ${headY}px, 0) translate(-50%, -50%)`;
