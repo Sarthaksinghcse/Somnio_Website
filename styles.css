@@ -1661,14 +1661,10 @@ button:focus-visible {
   line-height: 1.65;
 }
 
-/* --- Flip Card Animations & Layout --- */
+/* --- Flip Card Animations & Layout (2D Cross-dissolve for zero-flicker stability) --- */
 .flip-card {
-  perspective: 1000px;
-  -webkit-perspective: 1000px;
   height: 240px;
   background-color: transparent;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .flip-card .glass-card {
@@ -1690,16 +1686,11 @@ button:focus-visible {
   width: 100%;
   height: 100%;
   text-align: left;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: translate3d(0, -6px, 0) rotateY(180deg);
-  -webkit-transform: translate3d(0, -6px, 0) rotateY(180deg);
+  transform: translateY(-6px);
 }
 
 .flip-card-front,
@@ -1709,21 +1700,26 @@ button:focus-visible {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden !important;
-  backface-visibility: hidden !important;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin: 0;
   box-sizing: border-box;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0.4s ease;
 }
 
 .flip-card-front {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
   z-index: 2;
-  transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
+}
+
+.flip-card:hover .flip-card-front {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
+  z-index: 1;
 }
 
 .flip-card-front .learn-more-prompt {
@@ -1744,16 +1740,16 @@ button:focus-visible {
 }
 
 .flip-card-back {
-  transform: rotateY(180deg) translate3d(0, 0, 0);
-  -webkit-transform: rotateY(180deg) translate3d(0, 0, 0);
-  z-index: 1;
-}
-
-.flip-card:hover .flip-card-front {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
   z-index: 1;
 }
 
 .flip-card:hover .flip-card-back {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
   z-index: 2;
 }
 
@@ -2879,34 +2875,7 @@ button:focus-visible {
   }
 
   .download-ctas {
-    align-items: stretch;
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  .download-ctas .app-store-badge {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    background: #000;
-    border: 1.5px solid rgba(255, 255, 255, 0.15);
-    border-radius: 500px;
-    height: 48px;
-    width: 100%;
-    box-sizing: border-box;
-    transition: all 0.2s ease;
-  }
-
-  .download-ctas .app-store-badge img {
-    height: 32px;
-    width: auto;
-  }
-
-  .download-ctas .app-store-badge:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: var(--somnio-purple-bright);
-    transform: translateY(-2px);
   }
 
   .download-phone .phone-frame {
@@ -3039,7 +3008,7 @@ button:focus-visible {
   }
 
   .watch-mockup-img {
-    height: 180px;
+    height: 220px;
   }
 
   .download-watch {
@@ -3111,6 +3080,20 @@ button:focus-visible {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  #footer-col-links {
+    order: 1;
+  }
+
+  #footer-col-tech {
+    grid-column: span 1;
+    order: 2;
+  }
+
+  #footer-col-brand {
+    order: 3;
+    margin-top: 8px;
   }
 
   .social-proof-inner {
@@ -3372,6 +3355,10 @@ button:focus-visible {
     width: 200px;
     --phone-scale: 0.714;
     /* 200px / 280px */
+  }
+
+  .watch-mockup-img {
+    height: 180px;
   }
 }
 
