@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Somnio</title>
+  <meta name="description"
+    content="Somnio Privacy Policy. Learn how we handle your Apple Watch HealthKit and sleep data with absolute privacy and security.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Privacy Policy — Somnio">
+  <meta property="og:description"
+    content="Learn how Somnio protects and manages your sleep data. Grounded in HealthKit sandboxing.">
+  <meta property="og:type" content="website">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Cinematic Noise & Glassmorphic Highlights -->
+  <div class="interactive-glow-orb" id="interactiveGlowOrb" aria-hidden="true"></div>
+
+  <!-- Flowing Liquid Background -->
+  <div class="liquid-bg-container" aria-hidden="true">
+    <div class="liquid-orb liquid-orb-1"></div>
+    <div class="liquid-orb liquid-orb-2"></div>
+    <div class="liquid-orb liquid-orb-3"></div>
+    <div class="liquid-orb liquid-orb-4"></div>
+  </div>
+
+  <!-- Twinkling Sleep Dust Particles -->
+  <canvas id="sleep-dust-canvas" class="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       SECTION 1 — NAVIGATION
+       ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Somnio Home" id="nav-brand-link">
+        <img src="resource/app%20logo.png" alt="Somnio Logo" class="nav-logo">
+        Somnio
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" id="nav-link-home">Home</a>
+        <a href="index.html#download" class="nav-cta" id="nav-link-download">
+          <span class="btn btn-primary" style="padding: 10px 22px; font-size: 14px;">Get Somnio</span>
+        </a>
+      </div>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" id="mob-link-home">Home</a>
+    <a href="index.html#download" class="btn btn-primary" id="mob-link-download">Get Somnio</a>
+  </div>
+
+  <main>
+    <!-- ============================================================
+         SECTION 2 — LEGAL DETAILS
+         ============================================================ -->
+    <section class="legal-section section">
+      <div class="container">
+        
+
+
+        <div class="legal-header">
+          <span class="text-caption">Security First</span>
+          <h1 class="heading-section">Privacy Policy</h1>
+          <p class="text-body" style="font-size: 16px; color: var(--text-secondary); margin-top: 8px;">Last Updated: June 18, 2026</p>
+        </div>
+
+        <div class="legal-layout no-toc">
+          
+          <!-- Content Card -->
+          <article class="glass-card legal-content-card">
+            <div class="legal-content">
+              
+              <section id="introduction">
+                <h2>1. Introduction</h2>
+                <p>Welcome to Somnio. We are committed to protecting your privacy while helping you quiet your mind and rebuild your relationship with sleep. This Privacy Policy explains how we collect, store, secure, and handle your information when you use the Somnio iOS application and our website. This Privacy Policy is compiled in compliance with the Digital Personal Data Protection (DPDP) Act, 2023 of India, and other applicable Indian regulations governing online privacy and security.</p>
+                <p>We believe that your personal health data is yours alone. Somnio is designed around a privacy-first model, emphasizing <strong>on-device processing</strong> to minimize the collection of personal information and safeguard your sleep architecture.</p>
+              </section>
+
+              <section id="data-collection">
+                <h2>2. Data We Collect</h2>
+                <p>To provide you with personalized Cognitive Behavioral Therapy for Insomnia (CBT-I) dashboards and insights, Somnio accesses the following categories of information:</p>
+                <h3>Apple HealthKit Data</h3>
+                <p>With your explicit permission, Somnio reads data directly from Apple's HealthKit framework database on your iOS device. This includes:</p>
+                <ul>
+                  <li><strong>Sleep Architecture:</strong> Sleep stages (REM, Core, Deep, Awake), sleep duration, and sleep latency.</li>
+                  <li><strong>Cardiovascular Health:</strong> Heart rate, Resting Heart Rate (RHR), and Heart Rate Variability (HRV) during sleep.</li>
+                  <li><strong>Respiratory Metrics:</strong> Respiratory rate and blood oxygen saturation (SpO₂).</li>
+                </ul>
+                <h3>User-Entered Data</h3>
+                <p>We collect informational inputs that you manually provide within the app to support CBT-I exercises, including:</p>
+                <ul>
+                  <li>Bedtime sleep journals and cognitive thought logs.</li>
+                  <li>Sleep efficiency answers and subjective sleep quality ratings.</li>
+                  <li>Bedtime delay logs and wakefulness targets.</li>
+                </ul>
+              </section>
+
+              <section id="how-we-use">
+                <h2>3. How We Use Data</h2>
+                <p>Somnio uses the data collected from your Apple Watch and manual entries strictly to drive personalized sleep coaching features:</p>
+                <ul>
+                  <li>Calculating daily Sleep Efficiency scores to guide bedtime scheduling.</li>
+                  <li>Rendering historical analytics, charts, and sleep architecture progress.</li>
+                  <li>Powering interactive CBT-I coaching components and cognitive reframing schedules.</li>
+                  <li>Delivering tailored bedtime recommendations and relaxation breathing guides.</li>
+                </ul>
+                <p><strong>Strict HealthKit Restrictions:</strong> In compliance with Apple Developer Guidelines, we do not use HealthKit data for marketing, advertising, or profiling purposes. Your health metrics are used solely to deliver the core features of the Somnio app.</p>
+              </section>
+
+              <section id="storage-security">
+                <h2>4. Storage & Security</h2>
+                <p>Your privacy is hardcoded into our architecture:</p>
+                <ul>
+                  <li><strong>Local Database:</strong> By default, your health metrics and sleep logs are processed locally on your device inside iOS's secure application sandbox.</li>
+                  <li><strong>HealthKit Security:</strong> HealthKit data is encrypted by the iOS operating system when your device is locked.</li>
+                  <li><strong>Supabase Cloud Synchronization (Optional):</strong> If you choose to enable cloud backups, your data is transferred using end-to-end Transport Layer Security (TLS 1.3) to our secure database hosted on Supabase, which is encrypted at rest using AES-256.</li>
+                </ul>
+              </section>
+
+              <section id="sharing-disclosure">
+                <h2>5. Sharing & Third-Party Transfers</h2>
+                <p>We do not sell, rent, or lease your personal health data to third parties. We will only share data in the following restricted scenarios:</p>
+                <ul>
+                  <li><strong>Legal Compliance:</strong> If required by law, regulation, or legally binding government subpoenas.</li>
+                  <li><strong>Service Providers:</strong> Secure platform partners (such as Supabase for database backups or HealthKit system daemons) strictly to sustain operational services under confidentiality terms.</li>
+                </ul>
+              </section>
+
+              <section id="your-controls">
+                <h2>6. Your Controls & Permissions</h2>
+                <p>You have full sovereignty over your data at all times:</p>
+                <ul>
+                  <li><strong>HealthKit Access:</strong> You can grant, modify, or revoke Somnio's access to your Apple Health data at any time via the Settings app on iOS (Settings &gt; Privacy &gt; Health &gt; Somnio).</li>
+                  <li><strong>Data Deletion:</strong> You can delete your entire local application database and sleep logs directly from the settings menu inside the Somnio app. If you have enabled cloud sync, deleting your account will permanently purge all cloud backups.</li>
+                </ul>
+              </section>
+
+              <section id="contact">
+                <h2>7. Contact Us</h2>
+                <p>If you have any questions or concerns regarding our privacy practices, please contact our data protection team:</p>
+                <p><strong>Email:</strong> somnioteam@gmail.com</p>
+              </section>
+
+              <div class="legal-footer">
+                <p>© 2026 Somnio. All rights reserved. Sleep data is managed subject to iOS platform authorization rules.</p>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
