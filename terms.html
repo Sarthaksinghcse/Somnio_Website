@@ -46,8 +46,6 @@
 
       <div class="nav-links" id="navLinks">
         <a href="index.html" id="nav-link-home">Home</a>
-        <a href="privacy.html" id="nav-link-privacy">Privacy Policy</a>
-        <a href="terms.html" id="nav-link-terms" class="active">Terms & Conditions</a>
         <a href="index.html#download" class="nav-cta" id="nav-link-download">
           <span class="btn btn-primary" style="padding: 10px 22px; font-size: 14px;">Get Somnio</span>
         </a>
@@ -65,8 +63,6 @@
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html" id="mob-link-home">Home</a>
-    <a href="privacy.html" id="mob-link-privacy">Privacy Policy</a>
-    <a href="terms.html" id="mob-link-terms" class="active">Terms & Conditions</a>
     <a href="index.html#download" class="btn btn-primary" id="mob-link-download">Get Somnio</a>
   </div>
 
@@ -77,14 +73,7 @@
     <section class="legal-section section">
       <div class="container">
         
-        <a href="index.html" class="btn-back" id="back-to-home">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
-            stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
-            <line x1="19" y1="12" x2="5" y2="12"></line>
-            <polyline points="12 19 5 12 12 5"></polyline>
-          </svg>
-          Back to Home
-        </a>
+
 
         <div class="legal-header">
           <span class="text-caption">Platform Terms</span>
@@ -92,22 +81,8 @@
           <p class="text-body" style="font-size: 16px; color: var(--text-secondary); margin-top: 8px;">Last Updated: June 18, 2026</p>
         </div>
 
-        <div class="legal-layout">
+        <div class="legal-layout no-toc">
           
-          <!-- Table of Contents -->
-          <aside class="legal-toc" id="legal-toc-aside">
-            <div class="legal-toc-title">ON THIS PAGE</div>
-            <ul>
-              <li><a href="#acceptance" class="legal-toc-link active">1. Acceptance of Terms</a></li>
-              <li><a href="#medical-disclaimer" class="legal-toc-link">2. Medical Disclaimer</a></li>
-              <li><a href="#use-of-service" class="legal-toc-link">3. Use of Service</a></li>
-              <li><a href="#intellectual-prop" class="legal-toc-link">4. Intellectual Property</a></li>
-              <li><a href="#limitation-liability" class="legal-toc-link">5. Liability Limitations</a></li>
-              <li><a href="#governing-law" class="legal-toc-link">6. Governing Law</a></li>
-              <li><a href="#contact" class="legal-toc-link">7. Contact Info</a></li>
-            </ul>
-          </aside>
-
           <!-- Content Card -->
           <article class="glass-card legal-content-card">
             <div class="legal-content">
@@ -161,14 +136,13 @@
 
               <section id="governing-law">
                 <h2>6. Governing Law</h2>
-                <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to conflicts of law principles. Any legal suit, action, or proceeding arising out of or related to these Terms or the App shall be instituted exclusively in the federal or state courts located in San Francisco, California.</p>
+                <p>These Terms shall be governed by and construed in accordance with the laws of India, without regard to conflicts of law principles. Any legal suit, action, or proceeding arising out of or related to these Terms or the App shall be instituted exclusively in the courts located in New Delhi, India.</p>
               </section>
 
               <section id="contact">
                 <h2>7. Contact Info</h2>
                 <p>If you have any questions or require clarification regarding these Terms & Conditions, please contact us:</p>
-                <p><strong>Email:</strong> legal@somnio.app<br>
-                <strong>Mailing Address:</strong> Somnio Health Technologies LLC, 100 Sleep Science Way, Suite 400, San Francisco, CA 94107</p>
+                <p><strong>Email:</strong> somnioteam@gmail.com</p>
               </section>
 
               <div class="legal-footer">
@@ -183,79 +157,7 @@
     </section>
   </main>
 
-  <!-- ============================================================
-       SECTION 3 — FOOTER
-       ============================================================ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Column 1: Brand -->
-        <div id="footer-col-brand">
-          <a href="index.html" class="footer-logo">
-            <img src="resource/app%20logo.png" alt="Somnio Logo">
-            Somnio
-          </a>
-          <p class="footer-tagline">Quiet your mind. Relearn how to sleep.</p>
-          <div class="footer-socials">
-            <a href="#" aria-label="Follow Somnio on X (Twitter)">𝕏</a>
-            <a href="#" aria-label="Somnio on GitHub">⌨</a>
-            <a href="#" aria-label="Somnio on Instagram">📷</a>
-          </div>
-        </div>
-
-        <!-- Column 2: App links -->
-        <div id="footer-col-links">
-          <div class="footer-heading">App</div>
-          <div class="footer-links">
-            <a href="index.html#features">Features</a>
-            <a href="index.html#download">Download</a>
-            <a href="privacy.html">Privacy policy</a>
-            <a href="terms.html" style="color: var(--somnio-purple-bright); font-weight: 600;">Terms of service</a>
-            <a href="#">Support</a>
-          </div>
-        </div>
-
-        <!-- Column 3: Built with -->
-        <div id="footer-col-tech">
-          <div class="footer-heading">Built with</div>
-          <p class="footer-tech">Somnio is built with SwiftUI, HealthKit, and Supabase. Made for iOS and Apple Watch.
-            Sleep data stays private through Apple HealthKit's privacy framework.</p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Somnio. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
   <script src="script.js"></script>
-  
-  <!-- Table of Contents Active Link Highlight Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('.legal-content section');
-      const tocLinks = document.querySelectorAll('.legal-toc-link');
-
-      function makeActive() {
-        let fromTop = window.scrollY + 160;
-
-        sections.forEach(sec => {
-          if (sec.offsetTop <= fromTop && sec.offsetTop + sec.offsetHeight > fromTop) {
-            tocLinks.forEach(link => {
-              link.classList.remove('active');
-              if (link.getAttribute('href') === `#${sec.id}`) {
-                link.classList.add('active');
-              }
-            });
-          }
-        });
-      }
-
-      window.addEventListener('scroll', makeActive, { passive: true });
-      makeActive();
-    });
-  </script>
 </body>
 
 </html>

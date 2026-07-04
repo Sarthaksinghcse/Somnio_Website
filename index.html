@@ -25,6 +25,17 @@
 
 <body>
 
+  <!-- Premium Splash Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <img src="resource/app%20logo.png" alt="Somnio Logo" class="preloader-logo">
+      <h1 class="preloader-title">Welcome to Somnio</h1>
+      <div class="preloader-spinner-bar">
+        <div class="preloader-spinner-progress"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Cinematic Noise & Glassmorphic Highlights -->
   <div class="interactive-glow-orb" id="interactiveGlowOrb" aria-hidden="true"></div>
 
@@ -50,8 +61,8 @@
       </a>
 
       <div class="nav-links" id="navLinks">
+        <a href="#problem" id="nav-link-why">Why Somnio</a>
         <a href="#features" id="nav-link-features">Features</a>
-        <a href="#how-it-works" id="nav-link-how">How It Works</a>
         <a href="#articles" id="nav-link-articles">Sleep Science</a>
         <a href="#download" class="nav-cta" id="nav-link-download">
           <span class="btn btn-primary" style="padding: 10px 22px; font-size: 14px;">Get Somnio</span>
@@ -69,8 +80,8 @@
   <!-- Mobile Nav -->
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
   <div class="mobile-nav" id="mobileNav">
+    <a href="#problem" id="mob-link-why">Why Somnio</a>
     <a href="#features" id="mob-link-features">Features</a>
-    <a href="#how-it-works" id="mob-link-how">How It Works</a>
     <a href="#articles" id="mob-link-articles">Sleep Science</a>
     <a href="#download" class="btn btn-primary" id="mob-link-download">Get Somnio</a>
   </div>
@@ -83,9 +94,11 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <h1 class="heading-hero reveal" id="hero-title" style="transition-delay: 150ms;">Say goodbye to<br>sleepless
-              nights</h1>
-            <p class="text-body reveal" id="hero-subheadline" style="transition-delay: 250ms;">Somnio combines your Apple Watch data with clinically proven CBT I techniques to quiet your mind, break the cycle of sleeplessness, and rebuild your natural sleep cycle.</p>
+            <h1 class="heading-hero reveal" id="hero-title" style="transition-delay: 150ms;">Say goodbye to<br><span
+                class="text-purple">sleepless nights</span></h1>
+            <p class="text-body reveal" id="hero-subheadline" style="transition-delay: 250ms;">Somnio combines your
+              Apple Watch data with clinically proven CBT-I techniques to quiet your mind, break the cycle of
+              sleeplessness, and rebuild your natural sleep cycle.</p>
             <div class="hero-ctas reveal" style="transition-delay: 350ms;">
               <a href="#download" class="app-store-badge" aria-label="Download Somnio on the App Store"
                 id="hero-cta-primary">
@@ -98,22 +111,22 @@
           <div class="hero-visual reveal" style="transition-delay: 450ms;">
             <!-- Floating stat chips -->
             <div class="stat-chip" id="chip-score">
-              <span class="chip-value">87</span> Sleep Score <span class="chip-arrow">↑</span>
+              <span class="chip-value">58</span> Sleep Score <span class="chip-arrow">↑</span>
             </div>
             <div class="stat-chip" id="chip-deep">
-              <span class="chip-value">1h 24m</span> Deep Sleep
+              <span class="chip-value">30m</span> Deep Sleep
             </div>
             <div class="stat-chip" id="chip-hrv">
               <span class="chip-value">48ms</span> HRV
             </div>
             <div class="stat-chip" id="chip-total">
-              <span class="chip-value">7h 42m</span> Total Sleep
+              <span class="chip-value">4h 00m</span> Total Sleep
             </div>
 
             <!-- iPhone Mockup — Real Dashboard Screenshot -->
             <div class="phone-frame phone-frame-real-mockup" id="hero-phone-frame">
               <img src="resource/Dashboard.png"
-                alt="Somnio Sleep Dashboard showing sleep score, sleep stages, heart rate, bed time, wake time, and sleep delay tracking based on CBT I guidelines"
+                alt="Somnio Sleep Dashboard showing sleep score, sleep stages, heart rate, bed time, wake time, and sleep delay tracking based on CBT-I guidelines"
                 class="phone-mockup-img" loading="lazy">
             </div>
           </div>
@@ -122,7 +135,7 @@
         <!-- Social Proof Bar -->
         <div class="social-proof reveal" id="hero-social-proof" style="transition-delay: 600ms;">
           <div class="social-proof-inner">
-            <span>Designed for the Apple ecosystem · Requires iPhone and Apple Watch to work</span>
+            <span>Designed exclusively for iPhone and Apple Watch.</span>
           </div>
         </div>
       </div>
@@ -132,46 +145,81 @@
     <!-- ============================================================
          SECTION 3 — PAIN POINT
          ============================================================ -->
-    <section class="section section-center" id="problem">
+    <section class="section" id="problem">
       <div class="container">
-        <div class="section-header reveal">
-          <h2 class="heading-section" id="problem-title">Break the cycle of bedtime dread.</h2>
-          <p class="text-body" id="problem-desc">Insomnia is frustrating and exhausting. Somnio uses your Apple Watch and evidence based CBT I methods to help you rebuild your relationship with sleep without pills or empty promises.</p>
-        </div>
+        <div class="problem-layout">
+          
+          <div class="problem-left reveal">
+            <div class="section-header">
+              <h2 class="heading-section" id="problem-title">Make bedtime peaceful again.</h2>
+              <p class="text-body" id="problem-desc">Sleepless nights are frustrating and exhausting. Somnio uses your Apple Watch and evidence based CBT-I methods to help you rebuild your relationship with sleep without pills or empty promises.</p>
+            </div>
+          </div>
 
-        <div class="pain-stats reveal-children" id="problem-stats-grid">
-          <div class="glass-card pain-stat-card" id="pain-card-1">
-            <div class="stat-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" style="color: var(--somnio-purple-bright);">
-                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-              </svg>
+          <div class="problem-right reveal-children" id="problem-stats-grid">
+            <div class="glass-card pain-stat-card" id="pain-card-1">
+              <!-- Default Content (Shows without hover) -->
+              <div class="stat-card-default">
+                <div class="stat-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="color: var(--somnio-purple-bright);">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                  </svg>
+                </div>
+                <div class="stat-info-group">
+                  <div class="text-data">1 in 3</div>
+                  <div class="stat-label">Adults don't get enough sleep</div>
+                </div>
+              </div>
+              <!-- Hover Content (Shows on hover) -->
+              <div class="stat-card-hover">
+                <p class="stat-description">Over 33% of adults suffer from sleep issues. Somnio targets the behavioral causes of exhaustion without chemical dependency.</p>
+              </div>
             </div>
-            <div class="text-data">1 in 3</div>
-            <div class="stat-label">Adults don't get enough sleep</div>
-          </div>
-          <div class="glass-card pain-stat-card" id="pain-card-2">
-            <div class="stat-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" style="color: var(--somnio-purple-bright);">
-                <path d="M3 3v18h18" />
-                <path d="m19 9-5 5-4-4-3 3" />
-              </svg>
+            
+            <div class="glass-card pain-stat-card" id="pain-card-2">
+              <!-- Default Content (Shows without hover) -->
+              <div class="stat-card-default">
+                <div class="stat-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="color: var(--somnio-purple-bright);">
+                    <path d="M3 3v18h18" />
+                    <path d="m19 9-5 5-4-4-3 3" />
+                  </svg>
+                </div>
+                <div class="stat-info-group">
+                  <div class="text-data">4 stages</div>
+                  <div class="stat-label">Sleep stages that your body needs</div>
+                </div>
+              </div>
+              <!-- Hover Content (Shows on hover) -->
+              <div class="stat-card-hover">
+                <p class="stat-description">Awake, REM, Core, and Deep sleep are vital. Somnio tracks your watch data to identify and optimize your recovery patterns.</p>
+              </div>
             </div>
-            <div class="text-data">4 stages</div>
-            <div class="stat-label">Sleep stages that your body needs</div>
-          </div>
-          <div class="glass-card pain-stat-card" id="pain-card-3">
-            <div class="stat-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" style="color: var(--somnio-purple-bright);">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
+
+            <div class="glass-card pain-stat-card" id="pain-card-3">
+              <!-- Default Content (Shows without hover) -->
+              <div class="stat-card-default">
+                <div class="stat-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="color: var(--somnio-purple-bright);">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </div>
+                <div class="stat-info-group">
+                  <div class="text-data">20 min</div>
+                  <div class="stat-label">Time to fall asleep before it's a problem</div>
+                </div>
+              </div>
+              <!-- Hover Content (Shows on hover) -->
+              <div class="stat-card-hover">
+                <p class="stat-description">Healthy sleep latency is under 20 minutes. We nudge your circadian rhythm to naturally reset your sleep window.</p>
+              </div>
             </div>
-            <div class="text-data">20 min</div>
-            <div class="stat-label">Time to fall asleep before it's a problem</div>
           </div>
+
         </div>
       </div>
     </section>
@@ -217,11 +265,15 @@
               </svg>
             </div>
             <h3 class="heading-feature" id="feat-title-dashboard">Your Sleep Diary, Decoded</h3>
-            <p class="text-body" id="feat-desc-dashboard">Wake up to a complete picture of your night. The Sleep tab pulls total sleep duration, sleep score, bed time, wake time, and sleep stages directly from your Apple Watch. Every metric is analysed according to CBT I guidelines to help you understand your recovery.</p>
+            <p class="text-body" id="feat-desc-dashboard">Wake up to a complete picture of your night. The Sleep tab
+              pulls total sleep duration, sleep score, bed time, wake time, and sleep stages directly from your Apple
+              Watch. Every metric is analysed according to CBT-I guidelines to help you understand your recovery.</p>
           </div>
           <div class="feature-visual">
             <div class="phone-frame phone-frame-real-mockup" id="mock-phone-dashboard">
-              <img src="resource/Dashboard.png" alt="Somnio Sleep Tab showing sleep diary with total sleep, sleep score, bed time, wake time, and sleep stages breakdown" class="phone-mockup-img" loading="lazy">
+              <img src="resource/Dashboard.png"
+                alt="Somnio Sleep Tab showing sleep diary with total sleep, sleep score, bed time, wake time, and sleep stages breakdown"
+                class="phone-mockup-img" loading="lazy">
             </div>
           </div>
         </div>
@@ -232,16 +284,20 @@
             <div class="feature-icon" aria-hidden="true">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
                 stroke-linecap="round" stroke-linejoin="round" style="color: var(--somnio-purple-bright);">
-                <path d="M17 2s-3.5 0-7 3.5C8 7.5 7.5 10.5 7.5 12.5c0 .5.5 1 1 1 2 0 5-.5 7-2.5C19 7.5 19 4 19 4s-1 0-2-2z" />
-                <path d="M6 13c-1.5 1.5-2 3.5-2 5.5 0 2 1.5 3.5 3.5 3.5 2 0 4-.5 5.5-2L6 13z" />
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
               </svg>
             </div>
             <h3 class="heading-feature" id="feat-title-relaxation">Relax Your Mind Before Bed</h3>
-            <p class="text-body" id="feat-desc-relaxation">The Relaxation tab is your wind down companion. Follow a guided 4 7 8 breathing exercise with a calming visual timer. When you are ready, choose from a library of sleep music like Rainfall, Piano Dreams, and Flute Melodies to quiet a busy mind.</p>
+            <p class="text-body" id="feat-desc-relaxation">The Relaxation tab is your wind down companion. Follow a
+              guided 4 7 8 breathing exercise with a calming visual timer. When you are ready, choose from a library of
+              sleep music like Rainfall, Piano Dreams, and Flute Melodies to quiet a busy mind.</p>
           </div>
           <div class="feature-visual">
             <div class="phone-frame phone-frame-real-mockup" id="mock-phone-relaxation">
-              <img src="resource/Realaxation.png" alt="Somnio Relaxation tab with 4-7-8 breathing exercise and sleep music like Rainfall and Piano Dreams" class="phone-mockup-img" loading="lazy">
+              <img src="resource/Realaxation.png"
+                alt="Somnio Relaxation tab with 4-7-8 breathing exercise and sleep music like Rainfall and Piano Dreams"
+                class="phone-mockup-img" loading="lazy">
             </div>
           </div>
         </div>
@@ -253,15 +309,20 @@
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
                 stroke-linecap="round" stroke-linejoin="round" style="color: var(--somnio-purple-bright);">
                 <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
-                <path d="M17 11c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z" />
+                <path
+                  d="M17 11c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z" />
               </svg>
             </div>
             <h3 class="heading-feature" id="feat-title-ela">Ela — Dump Your Overthinking</h3>
-            <p class="text-body" id="feat-desc-ela">Quiet racing thoughts with Ela, your private thought recorder. Tap Start, speak freely, and Ela quietly saves everything. Your recordings stay completely private. Use Ela on your iPhone or directly from your Apple Watch for a faster, hands free bedtime journal.</p>
+            <p class="text-body" id="feat-desc-ela">Quiet racing thoughts with Ela, your private thought recorder. Tap
+              Start, speak freely, and Ela quietly saves everything. Your recordings stay completely private. Use Ela on
+              your iPhone or directly from your Apple Watch for a faster, hands free bedtime journal.</p>
           </div>
           <div class="feature-visual">
             <div class="phone-frame phone-frame-real-mockup" id="mock-phone-ela">
-              <img src="resource/Ela.png" alt="Ela Thought Recorder showing microphone interface with What's on your mind prompt and Start button" class="phone-mockup-img" loading="lazy">
+              <img src="resource/Ela.png"
+                alt="Ela Thought Recorder showing microphone interface with What's on your mind prompt and Start button"
+                class="phone-mockup-img" loading="lazy">
             </div>
           </div>
         </div>
@@ -277,11 +338,15 @@
               </svg>
             </div>
             <h3 class="heading-feature" id="feat-title-progress">Track Your Sleep Progress</h3>
-            <p class="text-body" id="feat-desc-progress">Track your sleep journey over time. The Progress tab maps nights tracked, average sleep score, and average sleep duration in a clear trend chart. Somnio shows whether your sleep is improving so you always know where you stand.</p>
+            <p class="text-body" id="feat-desc-progress">Track your sleep journey over time. The Progress tab maps
+              nights tracked, average sleep score, and average sleep duration in a clear trend chart. Somnio shows
+              whether your sleep is improving so you always know where you stand.</p>
           </div>
           <div class="feature-visual">
             <div class="phone-frame phone-frame-real-mockup" id="mock-phone-progress">
-              <img src="resource/Progress.png" alt="Somnio Progress tab showing sleep journey with nights tracked, average score, sleep score trend chart, and week by week breakdown" class="phone-mockup-img" loading="lazy">
+              <img src="resource/Progress.png"
+                alt="Somnio Progress tab showing sleep journey with nights tracked, average score, sleep score trend chart, and week by week breakdown"
+                class="phone-mockup-img" loading="lazy">
             </div>
           </div>
         </div>
@@ -299,11 +364,15 @@
               </svg>
             </div>
             <h3 class="heading-feature" id="feat-title-reports">Weekly Reports with AI Insights</h3>
-            <p class="text-body" id="feat-desc-reports">Get a detailed weekly report showing average sleep score, sleep stage breakdowns, and AI insights on sleep consistency. Review your progress anytime and export it as a shareable PDF to share with your doctor in one tap.</p>
+            <p class="text-body" id="feat-desc-reports">Get a detailed weekly report showing average sleep score, sleep
+              stage breakdowns, and AI insights on sleep consistency. Review your progress anytime and export it as a
+              shareable PDF to share with your doctor in one tap.</p>
           </div>
           <div class="feature-visual">
             <div class="phone-frame phone-frame-real-mockup" id="mock-phone-reports">
-              <img src="resource/Weekly Reports.png" alt="Somnio Week 1 Report showing average sleep score of 44, sleep stages breakdown, AI insights, and share button for PDF export" class="phone-mockup-img" loading="lazy">
+              <img src="resource/Weekly Reports.png"
+                alt="Somnio Week 1 Report showing average sleep score of 44, sleep stages breakdown, AI insights, and share button for PDF export"
+                class="phone-mockup-img" loading="lazy">
             </div>
           </div>
         </div>
@@ -321,24 +390,40 @@
           <h2 class="heading-section" id="how-section-title">Three simple steps.</h2>
         </div>
 
-        <div class="steps-grid reveal-children" id="steps-grid-container">
-          <div class="glass-card step-card" id="step-card-1">
-            <div class="step-number">1</div>
-            <h3 class="step-title">Set up</h3>
-            <p class="step-desc">Download Somnio and allow Apple Health access.</p>
-            <span class="step-time">One time</span>
-          </div>
-          <div class="glass-card step-card" id="step-card-2">
-            <div class="step-number">2</div>
-            <h3 class="step-title">Sleep</h3>
-            <p class="step-desc">Wear your Apple Watch to bed. Somnio will track your sleep automatically.</p>
-            <span class="step-time">Wear your Watch</span>
-          </div>
-          <div class="glass-card step-card" id="step-card-3">
-            <div class="step-number">3</div>
-            <h3 class="step-title">View data</h3>
-            <p class="step-desc">Open the app in the morning to see your sleep metrics, CBT I guidance, and recovery progress.</p>
-            <span class="step-time">Every morning</span>
+        <div class="steps-grid-container">
+          <svg class="steps-connecting-line" viewBox="0 0 1000 200" fill="none" preserveAspectRatio="none" aria-hidden="true">
+            <!-- Faint dashed path -->
+            <path d="M 166 70 Q 500 210 833 70" stroke="rgba(155, 77, 255, 0.12)" stroke-width="3" stroke-dasharray="8 6" stroke-linecap="round" />
+            <!-- Glowing dash-array tracking line -->
+            <path class="glowing-path" d="M 166 70 Q 500 210 833 70" stroke="url(#steps-glow-grad)" stroke-width="3" stroke-linecap="round" />
+            <defs>
+              <linearGradient id="steps-glow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="var(--somnio-purple)" stop-opacity="0" />
+                <stop offset="50%" stop-color="var(--somnio-purple-bright)" stop-opacity="1" />
+                <stop offset="100%" stop-color="var(--somnio-purple)" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <div class="steps-grid reveal-children">
+            <div class="glass-card step-card" id="step-card-1">
+              <div class="step-number">1</div>
+              <h3 class="step-title">Set up</h3>
+              <p class="step-desc">Download Somnio and allow Apple Health access.</p>
+              <span class="step-time">One time</span>
+            </div>
+            <div class="glass-card step-card" id="step-card-2">
+              <div class="step-number">2</div>
+              <h3 class="step-title">Sleep</h3>
+              <p class="step-desc">Wear your Apple Watch to bed. Somnio will track your sleep automatically.</p>
+              <span class="step-time">Wear your Watch</span>
+            </div>
+            <div class="glass-card step-card" id="step-card-3">
+              <div class="step-number">3</div>
+              <h3 class="step-title">View data</h3>
+              <p class="step-desc">Open the app in the morning to see your sleep metrics, CBT-I guidance, and recovery progress.</p>
+              <span class="step-time">Every morning</span>
+            </div>
           </div>
         </div>
       </div>
@@ -355,7 +440,8 @@
       <div class="container">
         <div class="section-header reveal">
           <h2 class="heading-section" id="articles-section-title">Learn about sleep.</h2>
-          <p class="text-body" id="articles-section-body">Read our short articles about sleep science. Learn about the 20 minute rule, sleep stages, and good habits.</p>
+          <p class="text-body" id="articles-section-body">Read our short articles about sleep science. Learn about the
+            20 minute rule, sleep stages, and good habits.</p>
         </div>
 
         <div class="articles-grid reveal-children" id="articles-grid-container">
@@ -364,16 +450,15 @@
               <div class="glass-card article-card flip-card-front">
                 <div class="article-front-header">
                   <span class="article-icon">🧠</span>
-                  <span class="article-tag">CBT I</span>
+                  <span class="article-tag">CBT-I</span>
                 </div>
-                <h3 class="article-title">What is CBT I?</h3>
+                <h3 class="article-title">What is CBT-I?</h3>
                 <p class="article-preview">The gold standard therapy for chronic insomnia.</p>
                 <span class="learn-more-prompt">Hover to learn →</span>
               </div>
               <div class="glass-card article-card flip-card-back">
-                <span class="article-tag">CBT I</span>
-                <h3 class="article-back-title">What is CBT I?</h3>
-                <p class="article-desc">CBT I is a structured program that helps you replace thoughts and behaviors that cause sleep problems with healthy habits. It is clinically proven to treat chronic insomnia without pills.</p>
+                <h3 class="article-back-title">What is CBT-I?</h3>
+                <p class="article-desc">Cognitive Behavioral Therapy for Insomnia (CBT-I) is a structured, evidence-based program that targets the root causes of sleep issues. By utilizing techniques like stimulus control, sleep restriction, and cognitive restructuring, it trains your brain to associate the bed with deep sleep rather than stress. It is clinically proven to treat chronic insomnia long-term without relying on sleeping pills.</p>
               </div>
             </div>
           </div>
@@ -390,9 +475,8 @@
                 <span class="learn-more-prompt">Hover to learn →</span>
               </div>
               <div class="glass-card article-card flip-card-back">
-                <span class="article-tag">Sleep Science</span>
                 <h3 class="article-back-title">The 20 minute rule</h3>
-                <p class="article-desc">If you are awake in bed for over 20 minutes, get up and do a relaxing activity in dim light. This trains your brain to associate the bed with sleep, not frustration.</p>
+                <p class="article-desc">If you find yourself awake in bed for more than 20 minutes, the golden rule is to get up. Go to another room and engage in a quiet, low-stimulus activity in dim light, such as reading a book or listening to calming music. Avoid screens or clock-watching. This technique prevents your brain from conditioning itself to associate your bed with frustration, anxiety, and wakefulness, making it easier to drift off when you return.</p>
               </div>
             </div>
           </div>
@@ -409,9 +493,8 @@
                 <span class="learn-more-prompt">Hover to learn →</span>
               </div>
               <div class="glass-card article-card flip-card-back">
-                <span class="article-tag">Education</span>
                 <h3 class="article-back-title">Sleep Stages</h3>
-                <p class="article-desc">Deep sleep restores your body, REM sleep processes memory and emotions, and Core sleep takes up the rest. Reaching all sleep stages is essential to waking up refreshed.</p>
+                <p class="article-desc">Your sleep is divided into distinct cycles, each serving a vital purpose. Deep sleep is essential for physical recovery, muscle repair, and immune support. REM sleep is where dreaming happens, crucial for emotional processing, memory consolidation, and cognitive function. Core sleep (light sleep) makes up the transition periods. Somnio decodes these stages from your Apple Watch data so you can see if you are getting the balanced, quality sleep your body requires.</p>
               </div>
             </div>
           </div>
@@ -428,9 +511,8 @@
                 <span class="learn-more-prompt">Hover to learn →</span>
               </div>
               <div class="glass-card article-card flip-card-back">
-                <span class="article-tag">Practical</span>
                 <h3 class="article-back-title">Good Sleep Habits</h3>
-                <p class="article-desc">Keep your bedroom cool and dark, avoid screens 1 hour before bed, and maintain a consistent sleep schedule to align your natural biological rhythm.</p>
+                <p class="article-desc">Consistent daily routines form the foundation of great sleep hygiene. Maintain a strict sleep schedule by waking up at the same time every day—even on weekends—to align your circadian rhythm. Keep your bedroom dark, quiet, and cool (around 65°F/18°C). Restrict screen exposure for at least one hour before bed, as blue light suppresses melatonin production. These small adjustments signal to your nervous system that it is safe and time to wind down.</p>
               </div>
             </div>
           </div>
@@ -447,14 +529,14 @@
         <div class="reveal download-content">
           <div class="download-text">
             <h2 class="heading-section" id="download-section-title">Reclaim your nights today.</h2>
-            <p class="text-body" id="download-section-subtitle">Start your CBT I journey. Free to download on iOS.</p>
-            
+            <p class="text-body" id="download-section-subtitle">Start your CBT-I journey. Free to download on App Store.</p>
+
             <div class="download-ctas">
               <a href="#download" class="app-store-badge" aria-label="Download Somnio on the App Store"
                 id="download-store-link">
                 <img src="resource/App_Store_Badge.png" alt="Download on the App Store">
               </a>
-              <p class="download-requirements" id="download-specs">Requires iOS 17+ · Apple Watch recommended · HealthKit access needed</p>
+              <p class="download-requirements" id="download-specs">Apple Watch mandatory · HealthKit access needed</p>
             </div>
           </div>
 
@@ -462,7 +544,8 @@
             <div class="download-devices">
               <!-- Apple Watch Mockup -->
               <div class="download-watch" id="mock-watch-download">
-                <img src="resource/Watch.png" alt="Somnio Apple Watch App showing Breathe and Start screen" class="watch-mockup-img" loading="lazy">
+                <img src="resource/Watch.png" alt="Somnio Apple Watch App showing Breathe and Start screen"
+                  class="watch-mockup-img" loading="lazy">
               </div>
               <!-- iPhone Mockup showing Start Screen -->
               <div class="download-phone">
@@ -491,32 +574,23 @@
             <img src="resource/app%20logo.png" alt="Somnio" class="footer-logo">
             Somnio
           </div>
-          <p class="footer-tagline">You deserve a peaceful night.</p>
-          <div class="footer-socials">
-            <a href="#" aria-label="Follow Somnio on X (Twitter)">𝕏</a>
-            <a href="#" aria-label="Somnio on GitHub">⌨</a>
-            <a href="#" aria-label="Somnio on Instagram">📷</a>
-          </div>
+          <p class="footer-tagline">Sleep better, Live better 😴</p>
         </div>
 
         <!-- Column 2: App links -->
         <div id="footer-col-links">
           <div class="footer-heading">App</div>
           <div class="footer-links">
-            <a href="#features">Features</a>
-            <a href="#how-it-works">How It Works</a>
-            <a href="#articles">Sleep Science</a>
-            <a href="#download">Download</a>
             <a href="privacy.html">Privacy policy</a>
-            <a href="terms.html">Terms of service</a>
-            <a href="#">Support</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="mailto:somnioteam@gmail.com">Support</a>
           </div>
         </div>
 
         <!-- Column 3: Built with -->
         <div id="footer-col-tech">
           <div class="footer-heading">Built with</div>
-          <p class="footer-tech">Somnio is built with SwiftUI, HealthKit, and Supabase. Made for iOS and Apple Watch. Sleep data stays private through Apple HealthKit privacy framework.</p>
+          <p class="footer-tech">Built by sleep deprived devs. No creepy tracking. Just gentle nudges toward better sleep.</p>
         </div>
       </div>
 
@@ -525,6 +599,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- Cinematic Popup Modal -->
+  <div class="modal-overlay" id="appStoreModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-icon">🔮🛠️</div>
+      <h3 class="modal-title">Under Construction!</h3>
+      <div class="modal-text">
+        <p>Thank you so much for your interest in Somnio 💜</p>
+        <p>We're currently in the final testing phase, making sure everything works perfectly before we launch.</p>
+        <p>We know how frustrating sleepless nights can be, and we're working hard to bring you an app that's truly worth the wait.</p>
+        <p>We'll be on the App Store very soon, and we can't wait to welcome you.</p>
+        <p>Thank you for your patience, support, and for believing in Somnio. See you soon! ✨</p>
+      </div>
+      <button class="btn btn-primary modal-btn" id="modalOkBtn">Got it!</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

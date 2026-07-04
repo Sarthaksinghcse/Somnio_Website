@@ -7,6 +7,33 @@
   'use strict';
 
   // ============================================================
+  // 0. PREMIUM SPLASH PRELOADER
+  // ============================================================
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    // Disable body scrolling during preloading
+    document.body.style.overflow = 'hidden';
+
+    const startTime = Date.now();
+
+    window.addEventListener('load', () => {
+      const elapsedTime = Date.now() - startTime;
+      // Guarantee a minimum of 2.5 seconds for visual loading branding
+      const remainingTime = Math.max(0, 2500 - elapsedTime);
+
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+        document.body.style.overflow = '';
+
+        // Clean up DOM
+        setTimeout(() => {
+          preloader.remove();
+        }, 600);
+      }, remainingTime);
+    });
+  }
+
+  // ============================================================
   // 1. SCROLL-TRIGGERED FADE-IN ANIMATIONS
   // ============================================================
   const revealElements = document.querySelectorAll('.reveal, .reveal-children');
@@ -115,6 +142,8 @@
     if (currentActive) {
       navLinks.forEach((l) => l.classList.remove('active'));
       currentActive.link.classList.add('active');
+    } else {
+      navLinks.forEach((l) => l.classList.remove('active'));
     }
   }
 
@@ -201,7 +230,7 @@
       let d = `M ${points[0].x} ${points[0].y}`;
       for (let i = 0; i < points.length - 1; i++) {
         const p1 = points[i];
-        const p2 = points[i+1];
+        const p2 = points[i + 1];
         const dY = p2.y - p1.y;
         const dX = Math.abs(p2.x - p1.x);
 
@@ -223,7 +252,7 @@
 
       // Recalculate path length for dash animations
       pathLength = activePath.getTotalLength();
-      
+
       activePath.style.strokeDasharray = pathLength;
       glowPath.style.strokeDasharray = pathLength;
 
@@ -278,41 +307,41 @@
   // 7. INTERACTIVE 3D GLASS CARD TILT & SHINE EFFECT
   // ============================================================
   const interactiveCards = document.querySelectorAll('.feature-info, .glass-card:not(.legal-content-card):not(.flip-card-front):not(.flip-card-back)');
-  
+
   interactiveCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       // Only apply 3D effects if the card is fully revealed
       const parentRow = card.closest('.feature-row, .reveal-children');
-      const isRevealed = parentRow 
-        ? parentRow.classList.contains('visible') 
+      const isRevealed = parentRow
+        ? parentRow.classList.contains('visible')
         : (!card.classList.contains('reveal') || card.classList.contains('visible'));
       if (!isRevealed) return;
 
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left; // cursor X inside card
       const y = e.clientY - rect.top;  // cursor Y inside card
-      
+
       // Update custom properties for CSS radial shine highlight
       card.style.setProperty('--mouse-x', `${x}px`);
       card.style.setProperty('--mouse-y', `${y}px`);
-      
+
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      
+
       // Calculate rotation angles (max 8 degrees for elegant restraint)
       const rotateX = ((y - centerY) / centerY) * -8;
       const rotateY = ((x - centerX) / centerX) * 8;
-      
+
       // Apply 3D transform perspective, rotate, and scale slightly up (1.02)
       card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
       card.style.transition = 'transform 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94)';
     });
-    
+
     card.addEventListener('mouseleave', () => {
       // Smoothly reset transformations
       card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
       card.style.transition = 'transform 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-      
+
       // Move shine spotlight off screen
       card.style.setProperty('--mouse-x', `-999px`);
       card.style.setProperty('--mouse-y', `-999px`);
@@ -345,7 +374,7 @@
         this.speedY = Math.random() * 0.4 - 0.2;
         this.alpha = Math.random() * 0.5 + 0.15;
         this.fadeDir = Math.random() > 0.5 ? 0.005 : -0.005;
-        this.color = Math.random() > 0.6 
+        this.color = Math.random() > 0.6
           ? '155, 77, 255' // Purple
           : (Math.random() > 0.5 ? '74, 144, 226' : '255, 255, 255'); // Blue or White
       }
@@ -462,4 +491,266 @@
       glowOrb.style.display = 'none';
     }
   }
+
+  // ============================================================
+  // 10. CUSTOM COMET STAR CURSOR
+  // ============================================================
+  function initCustomCursor() {
+    const hoverQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    // Check if device supports hover and doesn't prefer reduced motion
+    if (!hoverQuery.matches || motionQuery.matches) return;
+
+    // Create cursor container
+    const cursorContainer = document.createElement('div');
+    cursorContainer.className = 'custom-cursor-container';
+    cursorContainer.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(cursorContainer);
+
+    // Create comet head (the main star)
+    const cometHead = document.createElement('div');
+    cometHead.className = 'comet-head';
+    cometHead.innerHTML = `
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="star-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="50%" stop-color="#D6B4FF" />
+            <stop offset="100%" stop-color="#9B4DFF" />
+          </linearGradient>
+        </defs>
+        <path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z" fill="url(#star-gradient)"/>
+      </svg>
+    `;
+    cursorContainer.appendChild(cometHead);
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let headX = mouseX;
+    let headY = mouseY;
+    let lastSpawnX = mouseX;
+    let lastSpawnY = mouseY;
+    let hasMoved = false;
+
+    // Update mouse positions
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!hasMoved) {
+        hasMoved = true;
+        cometHead.classList.add('visible');
+        headX = mouseX;
+        headY = mouseY;
+      }
+    }, { passive: true });
+
+    // Track click state
+    window.addEventListener('mousedown', () => {
+      cometHead.classList.add('clicking');
+    });
+    window.addEventListener('mouseup', () => {
+      cometHead.classList.remove('clicking');
+    });
+
+    // Handle mouse leaving window
+    document.addEventListener('mouseleave', () => {
+      cometHead.classList.remove('visible');
+      hasMoved = false;
+    });
+
+    // Highlight on links / buttons
+    window.addEventListener('mouseover', (e) => {
+      const target = e.target;
+      if (target && (target.closest('a') || target.closest('button') || target.closest('.btn') || target.closest('[role="button"]') || target.closest('input[type="submit"]'))) {
+        cometHead.classList.add('hovering-link');
+      } else {
+        cometHead.classList.remove('hovering-link');
+      }
+    });
+
+    // Particle colors matching sleep dust: purple, blue, white
+    const colors = [
+      '#9B4DFF', // Purple
+      '#4A90E2', // Blue
+      '#FFFFFF'  // White
+    ];
+
+    function createTailParticle(x, y) {
+      const particle = document.createElement('div');
+      particle.className = 'comet-tail-particle';
+
+      // Randomize color, size, and rotation
+      const size = Math.random() * 12 + 6; // 6px to 18px
+      const color = colors[Math.floor(Math.random() * colors.length)];
+
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${x}px`;
+      particle.style.top = `${y}px`;
+
+      particle.innerHTML = `
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z" fill="${color}" />
+        </svg>
+      `;
+
+      cursorContainer.appendChild(particle);
+
+      // Remove particle after animation ends
+      setTimeout(() => {
+        particle.remove();
+      }, 700);
+    }
+
+    // Animation Loop
+    function updateCursor() {
+      // Lerp for smooth comet delay
+      const dx = mouseX - headX;
+      const dy = mouseY - headY;
+
+      headX += dx * 0.15; // Inertia factor (lower = smoother comet delay)
+      headY += dy * 0.15;
+
+      // Update comet head position
+      cometHead.style.transform = `translate3d(${headX}px, ${headY}px, 0) translate(-50%, -50%)`;
+
+      // Check distance from last particle spawn to create beautiful tail spacing
+      const dist = Math.hypot(headX - lastSpawnX, headY - lastSpawnY);
+      if (dist > 8 && hasMoved) {
+        createTailParticle(headX, headY);
+        lastSpawnX = headX;
+        lastSpawnY = headY;
+      }
+
+      requestAnimationFrame(updateCursor);
+    }
+
+    updateCursor();
+  }
+
+  initCustomCursor();
+
+  // ============================================================
+  // 11. COMING SOON POPUP MODAL
+  // ============================================================
+  function initPopupModal() {
+    const modal = document.getElementById('appStoreModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const okBtn = document.getElementById('modalOkBtn');
+    const badgeLinks = document.querySelectorAll('#hero-cta-primary, #download-store-link');
+
+    if (!modal || !okBtn) return;
+
+    function openModal(e) {
+      e.preventDefault();
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden'; // prevent scrolling behind modal
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = ''; // restore scrolling
+    }
+
+    badgeLinks.forEach(link => {
+      link.addEventListener('click', openModal);
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeModal);
+    }
+    okBtn.addEventListener('click', closeModal);
+
+    // Close on click outside modal card
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) {
+        closeModal();
+      }
+    });
+  }
+
+  initPopupModal();
+
+  // ============================================================
+  // 12. WORD HOVER HIGHLIGHT EFFECT & PROXIMITY GLOW
+  // ============================================================
+  function initWordHoverEffect() {
+    const textBodies = document.querySelectorAll('.feature-info .text-body, .feature-info .heading-feature');
+
+    textBodies.forEach(p => {
+      const text = p.textContent;
+      const words = text.split(/\s+/);
+      p.innerHTML = words.map(word => {
+        return `<span class="hover-word">${word}</span>`;
+      }).join(' ');
+    });
+
+    const hoverWords = [];
+    document.querySelectorAll('.hover-word').forEach(wordSpan => {
+      hoverWords.push({
+        element: wordSpan,
+        rect: null
+      });
+    });
+
+    const cards = document.querySelectorAll('.glass-card, .feature-info');
+
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        // Caches coordinates on hover start to prevent layout thrashing on mousemove
+        hoverWords.forEach(item => {
+          if (card.contains(item.element)) {
+            const rect = item.element.getBoundingClientRect();
+            item.rect = {
+              x: rect.left + rect.width / 2 + window.scrollX,
+              y: rect.top + rect.height / 2 + window.scrollY
+            };
+          }
+        });
+      });
+
+      card.addEventListener('mousemove', (e) => {
+        const mouseX = e.pageX;
+        const mouseY = e.pageY;
+        const radius = 100; // Highlight radius in pixels
+
+        hoverWords.forEach(item => {
+          if (!item.rect) return;
+          const dx = mouseX - item.rect.x;
+          const dy = mouseY - item.rect.y;
+          const dist = Math.hypot(dx, dy);
+
+          if (dist < radius) {
+            const factor = 1 - dist / radius; // 1 at center, 0 at border
+            item.element.style.color = `color-mix(in srgb, var(--somnio-purple) ${Math.round(factor * 100)}%, rgba(255, 255, 255, 0.8))`;
+            item.element.style.transform = `scale(${1 + factor * 0.06})`;
+          } else {
+            item.element.style.color = '';
+            item.element.style.transform = '';
+          }
+        });
+      });
+
+      card.addEventListener('mouseleave', () => {
+        hoverWords.forEach(item => {
+          if (card.contains(item.element)) {
+            item.element.style.color = '';
+            item.element.style.transform = '';
+            item.rect = null;
+          }
+        });
+      });
+    });
+  }
+
+  initWordHoverEffect();
 })();
+
