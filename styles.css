@@ -3632,6 +3632,41 @@ button:focus-visible {
   color: #fff;
 }
 
+.legal-content a {
+  color: var(--somnio-purple-bright);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.legal-content a:hover {
+  color: #fff;
+}
+
+.legal-content code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: rgba(123, 47, 190, 0.15);
+  border: 1px solid rgba(155, 77, 255, 0.25);
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #e0d0ff;
+}
+
+.legal-content blockquote,
+.legal-content .legal-callout {
+  background: rgba(123, 47, 190, 0.08);
+  border-left: 3px solid var(--somnio-purple-bright);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+
+.legal-content blockquote p,
+.legal-content .legal-callout p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
 .legal-footer {
   margin-top: 48px;
   padding-top: 24px;
@@ -3750,6 +3785,17 @@ button:focus-visible {
   .legal-content li {
     font-size: 15px;
     line-height: 1.65;
+    overflow-wrap: break-word;
+  }
+
+  .legal-content blockquote,
+  .legal-content .legal-callout {
+    padding: 14px 16px;
+    margin: 16px 0;
+  }
+
+  .legal-content code {
+    word-break: break-word;
   }
 }
 

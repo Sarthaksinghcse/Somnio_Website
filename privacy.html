@@ -78,7 +78,7 @@
         <div class="legal-header">
           <span class="text-caption">Security First</span>
           <h1 class="heading-section">Privacy Policy</h1>
-          <p class="text-body" style="font-size: 16px; color: var(--text-secondary); margin-top: 8px;">Last Updated: June 18, 2026</p>
+          <p class="text-body" style="font-size: 16px; color: var(--text-secondary); margin-top: 8px;"><strong>Effective Date:</strong> August 24, 2026 &nbsp;|&nbsp; <strong>Last Updated:</strong> August 24, 2026</p>
         </div>
 
         <div class="legal-layout no-toc">
@@ -89,77 +89,115 @@
               
               <section id="introduction">
                 <h2>1. Introduction</h2>
-                <p>Welcome to Somnio. We are committed to protecting your privacy while helping you quiet your mind and rebuild your relationship with sleep. This Privacy Policy explains how we collect, store, secure, and handle your information when you use the Somnio iOS application and our website. This Privacy Policy is compiled in compliance with the Digital Personal Data Protection (DPDP) Act, 2023 of India, and other applicable Indian regulations governing online privacy and security.</p>
-                <p>We believe that your personal health data is yours alone. Somnio is designed around a privacy-first model, emphasizing <strong>on-device processing</strong> to minimize the collection of personal information and safeguard your sleep architecture.</p>
+                <p>Welcome to <strong>Somnio</strong> ("we," "our," or "us"). We are committed to protecting your privacy while helping you track, understand, and improve your sleep through clinically informed Cognitive Behavioral Therapy for Insomnia (CBT-I) techniques.</p>
+                <p>This Privacy Policy explains how we collect, use, store, and safeguard your personal information when you use the Somnio iOS application, Somnio Watch App, and our website. This policy is compiled in compliance with applicable data protection regulations, including India's Digital Personal Data Protection (DPDP) Act, 2023, and Apple App Store Review Guidelines.</p>
+                <p>By downloading, accessing, or using Somnio, you agree to the collection and use of information in accordance with this policy.</p>
               </section>
 
-              <section id="data-collection">
-                <h2>2. Data We Collect</h2>
-                <p>To provide you with personalized Cognitive Behavioral Therapy for Insomnia (CBT-I) dashboards and insights, Somnio accesses the following categories of information:</p>
-                <h3>Apple HealthKit Data</h3>
-                <p>With your explicit permission, Somnio reads data directly from Apple's HealthKit framework database on your iOS device. This includes:</p>
+              <section id="age-requirement">
+                <h2>2. Age Requirement (18+)</h2>
+                <p>Somnio is intended strictly for adults. <strong>You must be at least 18 years of age</strong> to create an account or use Somnio. We do not knowingly collect personal data from anyone under the age of 18. If we discover that a user under 18 has provided us with personal data, we will immediately delete such information.</p>
+              </section>
+
+              <section id="information-collected">
+                <h2>3. Information We Collect</h2>
+                <p>To provide our core features, sleep metrics, and personalized insights, Somnio collects the following categories of data:</p>
+                
+                <h3>A. Account &amp; Profile Information</h3>
                 <ul>
-                  <li><strong>Sleep Architecture:</strong> Sleep stages (REM, Core, Deep, Awake), sleep duration, and sleep latency.</li>
-                  <li><strong>Cardiovascular Health:</strong> Heart rate, Resting Heart Rate (RHR), and Heart Rate Variability (HRV) during sleep.</li>
-                  <li><strong>Respiratory Metrics:</strong> Respiratory rate and blood oxygen saturation (SpO₂).</li>
+                  <li><strong>Authentication Data:</strong> Name, email address, and unique User ID provided via <strong>Sign in with Apple</strong> or our authentication provider (Supabase Auth).</li>
+                  <li><strong>Personal Demographics:</strong> Date of birth (to verify age requirement) and gender.</li>
+                  <li><strong>Sleep Preferences:</strong> Preferred bedtime, wake time, and target sleep duration goals.</li>
                 </ul>
-                <h3>User-Entered Data</h3>
-                <p>We collect informational inputs that you manually provide within the app to support CBT-I exercises, including:</p>
+
+                <h3>B. Apple HealthKit Data (Read-Only)</h3>
+                <p>With your explicit consent, Somnio reads physiological metrics from Apple HealthKit on your iPhone and Apple Watch:</p>
                 <ul>
-                  <li>Bedtime sleep journals and cognitive thought logs.</li>
-                  <li>Sleep efficiency answers and subjective sleep quality ratings.</li>
-                  <li>Bedtime delay logs and wakefulness targets.</li>
+                  <li><strong>Sleep Analysis:</strong> Sleep duration, sleep latency, and sleep stages (Deep Sleep, REM Sleep, Core Sleep, and Awake duration).</li>
+                  <li><strong>Cardiovascular Metrics:</strong> Heart Rate and Heart Rate Variability (HRV SDNN).</li>
+                  <li><strong>Respiratory &amp; Oxygenation Metrics:</strong> Blood Oxygen Saturation (SpO₂) and Respiratory Rate.</li>
+                </ul>
+
+                <blockquote class="legal-callout">
+                  <p><strong>HealthKit Protection Guarantee:</strong><br>
+                  Somnio only <strong>reads</strong> data from Apple HealthKit (<code>toShare: []</code>). We <strong>never write</strong> or modify your Apple Health records. In compliance with Apple guidelines, your HealthKit data is <strong>never used for marketing, advertising, profiling, or shared with data brokers</strong>.</p>
+                </blockquote>
+
+                <h3>C. Emotional Log &amp; Awareness (ELA) &amp; Check-Ins</h3>
+                <ul>
+                  <li><strong>Pre-Sleep Voice &amp; Text Journal:</strong> Voice memos recorded on iPhone or Apple Watch (transcribed into text on-device) and written thought logs.</li>
+                  <li><strong>Sentiment Analysis:</strong> Qualitative emotional scores derived from your pre-sleep thoughts to help correlate mindset with sleep quality.</li>
+                  <li><strong>Daily Check-Ins:</strong> Evening and morning logs including stress level, mental busyness rating, afternoon caffeine consumption (after 2 PM), and subjective rest ratings.</li>
                 </ul>
               </section>
 
               <section id="how-we-use">
-                <h2>3. How We Use Data</h2>
-                <p>Somnio uses the data collected from your Apple Watch and manual entries strictly to drive personalized sleep coaching features:</p>
-                <ul>
-                  <li>Calculating daily Sleep Efficiency scores to guide bedtime scheduling.</li>
-                  <li>Rendering historical analytics, charts, and sleep architecture progress.</li>
-                  <li>Powering interactive CBT-I coaching components and cognitive reframing schedules.</li>
-                  <li>Delivering tailored bedtime recommendations and relaxation breathing guides.</li>
-                </ul>
-                <p><strong>Strict HealthKit Restrictions:</strong> In compliance with Apple Developer Guidelines, we do not use HealthKit data for marketing, advertising, or profiling purposes. Your health metrics are used solely to deliver the core features of the Somnio app.</p>
+                <h2>4. How We Use Your Information</h2>
+                <p>We use collected information <strong>strictly for App Functionality</strong> and user experience:</p>
+                <ol>
+                  <li><strong>Sleep Scoring:</strong> Calculating your daily <strong>Sleep Achievement Score (0–100)</strong> and <strong>Recovery Index</strong>.</li>
+                  <li><strong>Behavioral Correlations:</strong> Identifying lifestyle and stress patterns that positively or negatively impact your sleep quality.</li>
+                  <li><strong>CBT-I 20-Minute Rule Guidance:</strong> Detecting prolonged wakefulness via Apple Watch motion sensors and providing stimulus control guidance.</li>
+                  <li><strong>AI-Powered Weekly Reports:</strong> Generating personalized sleep summaries, problem identification, and actionable solutions via secure serverless processing (Supabase Edge Functions).</li>
+                  <li><strong>Smart Notifications:</strong> Delivering scheduled bedtime preparation alerts, caffeine cutoff reminders, and progress milestones.</li>
+                  <li><strong>Cross-Device Synchronization:</strong> Keeping your sleep journal and settings synchronized between your iPhone, Apple Watch, and cloud storage.</li>
+                </ol>
               </section>
 
               <section id="storage-security">
-                <h2>4. Storage & Security</h2>
-                <p>Your privacy is hardcoded into our architecture:</p>
+                <h2>5. Data Storage, Security &amp; Retention</h2>
                 <ul>
-                  <li><strong>Local Database:</strong> By default, your health metrics and sleep logs are processed locally on your device inside iOS's secure application sandbox.</li>
-                  <li><strong>HealthKit Security:</strong> HealthKit data is encrypted by the iOS operating system when your device is locked.</li>
-                  <li><strong>Supabase Cloud Synchronization (Optional):</strong> If you choose to enable cloud backups, your data is transferred using end-to-end Transport Layer Security (TLS 1.3) to our secure database hosted on Supabase, which is encrypted at rest using AES-256.</li>
+                  <li><strong>Data Encryption in Transit:</strong> All network communication between the Somnio app and backend infrastructure is encrypted using Transport Layer Security (<strong>TLS 1.3 / HTTPS</strong>).</li>
+                  <li><strong>Data Encryption at Rest:</strong> Cloud database records are securely hosted on Supabase (PostgreSQL) and encrypted at rest using industry-standard <strong>AES-256</strong>.</li>
+                  <li><strong>Local Storage:</strong> Cached records on your device are stored within the iOS sandbox and cleared upon sign-out.</li>
+                  <li><strong>No Third-Party Ad Trackers:</strong> Somnio contains <strong>zero</strong> third-party advertising SDKs, ad networks, or user-tracking pixels.</li>
                 </ul>
               </section>
 
-              <section id="sharing-disclosure">
-                <h2>5. Sharing & Third-Party Transfers</h2>
-                <p>We do not sell, rent, or lease your personal health data to third parties. We will only share data in the following restricted scenarios:</p>
+              <section id="sharing-services">
+                <h2>6. Data Sharing &amp; Third-Party Services</h2>
+                <p>We do <strong>not</strong> sell, rent, trade, or monetize your personal data. We only share data with trusted technical infrastructure providers necessary to operate the service:</p>
                 <ul>
-                  <li><strong>Legal Compliance:</strong> If required by law, regulation, or legally binding government subpoenas.</li>
-                  <li><strong>Service Providers:</strong> Secure platform partners (such as Supabase for database backups or HealthKit system daemons) strictly to sustain operational services under confidentiality terms.</li>
+                  <li><strong>Apple (HealthKit &amp; Sign in with Apple):</strong> For on-device health metric retrieval and secure sign-in.</li>
+                  <li><strong>Supabase:</strong> For secure cloud database storage, authentication, and serverless Edge Function execution.</li>
+                  <li><strong>Legal Requirements:</strong> If mandated by law, court order, or governmental authority.</li>
                 </ul>
               </section>
 
-              <section id="your-controls">
-                <h2>6. Your Controls & Permissions</h2>
-                <p>You have full sovereignty over your data at all times:</p>
-                <ul>
-                  <li><strong>HealthKit Access:</strong> You can grant, modify, or revoke Somnio's access to your Apple Health data at any time via the Settings app on iOS (Settings &gt; Privacy &gt; Health &gt; Somnio).</li>
-                  <li><strong>Data Deletion:</strong> You can delete your entire local application database and sleep logs directly from the settings menu inside the Somnio app. If you have enabled cloud sync, deleting your account will permanently purge all cloud backups.</li>
-                </ul>
+              <section id="privacy-rights">
+                <h2>7. Your Privacy Rights &amp; Account Deletion</h2>
+                <p>You have complete control over your data:</p>
+                <ol>
+                  <li><strong>HealthKit Permissions:</strong> You can modify or revoke Somnio’s access to Apple Health anytime via <strong>iOS Settings → Privacy &amp; Security → Health → Somnio</strong>.</li>
+                  <li><strong>Permanent Account Deletion (In-App):</strong><br>
+                  You can permanently delete your entire account and all associated data directly inside the app:
+                    <ul style="margin-top: 8px;">
+                      <li>Go to <strong>Profile → Delete Account</strong>.</li>
+                      <li>Confirm deletion.</li>
+                      <li>This action immediately and permanently purges your profile, all sleep sessions, weekly report history, check-in records, and ELA journal entries from our cloud databases and clears local storage.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Data Access &amp; Correction:</strong> You can update your profile details and sleep targets directly within the app settings.</li>
+                </ol>
+              </section>
+
+              <section id="policy-changes">
+                <h2>8. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our features or legal requirements. The updated policy will be posted on this page with an updated "Last Updated" date.</p>
               </section>
 
               <section id="contact">
-                <h2>7. Contact Us</h2>
-                <p>If you have any questions or concerns regarding our privacy practices, please contact our data protection team:</p>
-                <p><strong>Email:</strong> somnioteam@gmail.com</p>
+                <h2>9. Contact Us</h2>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please reach out to us at:</p>
+                <ul>
+                  <li><strong>Email:</strong> <a href="mailto:somnioteam@gmail.com">somnioteam@gmail.com</a></li>
+                  <li><strong>Developer:</strong> Somnio Team</li>
+                  <li><strong>Support Website:</strong> <a href="https://somnioapp.netlify.app" target="_blank" rel="noopener noreferrer">https://somnioapp.netlify.app</a></li>
+                </ul>
               </section>
 
               <div class="legal-footer">
-                <p>© 2026 Somnio. All rights reserved. Sleep data is managed subject to iOS platform authorization rules.</p>
+                <p>© 2026 Somnio Team. All rights reserved.</p>
               </div>
 
             </div>
