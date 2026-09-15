@@ -1,5 +1,5 @@
 /* ============================================================
-   SOMNIO — Landing Page Scripts
+   RENAP — Landing Page Scripts
    Scroll animations, mobile nav, active section tracking
    ============================================================ */
 
@@ -726,7 +726,7 @@
 
           if (dist < radius) {
             const factor = 1 - dist / radius; // 1 at center, 0 at border
-            item.element.style.color = `color-mix(in srgb, var(--somnio-purple) ${Math.round(factor * 100)}%, rgba(255, 255, 255, 0.8))`;
+            item.element.style.color = `color-mix(in srgb, var(--renap-purple) ${Math.round(factor * 100)}%, rgba(255, 255, 255, 0.8))`;
             item.element.style.transform = `scale(${1 + factor * 0.06})`;
           } else {
             item.element.style.color = '';

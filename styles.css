@@ -1,5 +1,5 @@
 /* ============================================================
-   SOMNIO — Landing Page Styles
+   RENAP — Landing Page Styles
    Complete responsive rewrite
    ============================================================ */
 
@@ -10,12 +10,12 @@
    ============================================================ */
 :root {
   /* Brand Colors */
-  --somnio-purple: #7B2FBE;
-  --somnio-purple-bright: #9B4DFF;
-  --somnio-deep-purple: #7B61FF;
-  --somnio-moon-blue: #4A90E2;
-  --somnio-orb-pink: #FF2D9B;
-  --somnio-orb-blue: #3D5AFE;
+  --renap-purple: #7B2FBE;
+  --renap-purple-bright: #9B4DFF;
+  --renap-deep-purple: #7B61FF;
+  --renap-moon-blue: #4A90E2;
+  --renap-orb-pink: #FF2D9B;
+  --renap-orb-blue: #3D5AFE;
 
   /* Sleep Stage Colors */
   --sleep-awake: #FF6B6B;
@@ -156,11 +156,11 @@ ol {
   font-family: var(--font-mono);
   font-size: clamp(36px, 4.5vw, 72px);
   font-weight: 700;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
 }
 
 .text-purple {
-  color: var(--somnio-purple-bright) !important;
+  color: var(--renap-purple-bright) !important;
 }
 
 /* ============================================================
@@ -258,7 +258,7 @@ ol {
 }
 
 .btn-primary {
-  background: var(--somnio-purple);
+  background: var(--renap-purple);
   color: var(--text-primary);
   box-shadow: 0 8px 24px rgba(123, 47, 190, 0.3);
 }
@@ -275,8 +275,8 @@ ol {
 
 .btn-ghost {
   background: transparent;
-  color: var(--somnio-purple-bright);
-  border: 1.5px solid var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
+  border: 1.5px solid var(--renap-purple-bright);
 }
 
 .btn-ghost:hover {
@@ -293,7 +293,7 @@ ol {
 .btn:focus-visible,
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--somnio-purple-bright);
+  outline: 2px solid var(--renap-purple-bright);
   outline-offset: 3px;
 }
 
@@ -491,7 +491,7 @@ button:focus-visible {
 .nav-brand svg {
   width: 28px;
   height: 28px;
-  fill: var(--somnio-purple-bright);
+  fill: var(--renap-purple-bright);
 }
 
 .nav-logo {
@@ -522,7 +522,7 @@ button:focus-visible {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--somnio-purple-bright);
+  background: var(--renap-purple-bright);
   border-radius: 1px;
   transition: width 250ms ease;
 }
@@ -626,7 +626,7 @@ button:focus-visible {
 
 .mobile-nav a:hover,
 .mobile-nav a.active {
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
 }
 
 .mobile-nav .btn {
@@ -714,7 +714,7 @@ button:focus-visible {
 .stat-chip .chip-value {
   font-family: var(--font-mono);
   font-weight: 700;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
 }
 
 .stat-chip .chip-arrow {
@@ -888,7 +888,7 @@ button:focus-visible {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 3px solid var(--somnio-purple-bright);
+  border: 3px solid var(--renap-purple-bright);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -902,15 +902,15 @@ button:focus-visible {
   inset: -1px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: var(--somnio-deep-purple);
-  border-right-color: var(--somnio-deep-purple);
+  border-top-color: var(--renap-deep-purple);
+  border-right-color: var(--renap-deep-purple);
 }
 
 .screen-score {
   font-family: var(--font-mono);
   font-size: 26px;
   font-weight: 700;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
 }
 
 .screen-score-label {
@@ -1135,12 +1135,12 @@ button:focus-visible {
 
 .pain-stat-card:hover .stat-icon {
   background: rgba(155, 77, 255, 0.25);
-  border-color: var(--somnio-purple-bright);
+  border-color: var(--renap-purple-bright);
   box-shadow: 0 0 15px rgba(155, 77, 255, 0.4);
 }
 
 .pain-stat-card:hover .text-data {
-  background: linear-gradient(135deg, var(--somnio-purple-bright) 0%, var(--somnio-orb-pink) 100%);
+  background: linear-gradient(135deg, var(--renap-purple-bright) 0%, var(--renap-orb-pink) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1235,7 +1235,7 @@ button:focus-visible {
 .feature-svg-icon {
   width: 26px;
   height: 26px;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
   display: block;
 }
 
@@ -1254,7 +1254,7 @@ button:focus-visible {
   border: 1px solid rgba(123, 47, 190, 0.25);
   border-radius: 12px;
   font-size: 14px;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
   font-weight: 500;
   margin-top: 4px;
 }
@@ -1272,7 +1272,7 @@ button:focus-visible {
   border: 1px solid rgba(155, 77, 255, 0.2);
   border-radius: 20px;
   font-size: 13px;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
   font-weight: 500;
 }
 
@@ -1455,7 +1455,7 @@ button:focus-visible {
   border: 1px solid rgba(155, 77, 255, 0.15);
   border-radius: 20px;
   font-size: 11.5px;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -1482,15 +1482,15 @@ button:focus-visible {
 }
 
 .step-card:hover .step-number {
-  background: var(--somnio-purple-bright);
-  border-color: var(--somnio-purple-bright);
+  background: var(--renap-purple-bright);
+  border-color: var(--renap-purple-bright);
   box-shadow: 0 0 15px rgba(155, 77, 255, 0.5);
   color: #fff;
 }
 
 .step-card:hover .step-time {
   background: rgba(155, 77, 255, 0.15);
-  border-color: var(--somnio-purple-bright);
+  border-color: var(--renap-purple-bright);
   box-shadow: 0 0 10px rgba(155, 77, 255, 0.2);
 }
 
@@ -1547,7 +1547,7 @@ button:focus-visible {
 }
 
 .ela-feature-card .emoji svg {
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
 }
 
 .ela-feature-card .ela-feat-title {
@@ -1586,7 +1586,7 @@ button:focus-visible {
 
 .waveform-bar {
   width: 3px;
-  background: var(--somnio-purple-bright);
+  background: var(--renap-purple-bright);
   border-radius: 2px;
   animation: waveform 1.5s ease-in-out infinite;
 }
@@ -1631,7 +1631,7 @@ button:focus-visible {
   height: 42px;
   padding: 0 16px;
   background: linear-gradient(135deg, rgba(155, 77, 255, 0.2), rgba(123, 47, 190, 0.12));
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
   border-radius: 21px;
   font-size: 12px;
   font-weight: 600;
@@ -1726,7 +1726,7 @@ button:focus-visible {
   margin-top: auto;
   font-size: 13px;
   font-weight: 600;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
   opacity: 0.7;
   transition: opacity 0.3s ease, letter-spacing 0.3s ease;
   display: flex;
@@ -1898,7 +1898,7 @@ button:focus-visible {
   background: rgba(123, 47, 190, 0.15);
   border: 1px solid rgba(155, 77, 255, 0.2);
   border-radius: 12px;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
   flex-shrink: 0;
 }
 
@@ -1988,7 +1988,7 @@ button:focus-visible {
 .footer-brand svg {
   width: 32px;
   height: 32px;
-  fill: var(--somnio-purple-bright);
+  fill: var(--renap-purple-bright);
 }
 
 .footer-logo {
@@ -2034,7 +2034,7 @@ button:focus-visible {
 
 .footer-socials a:hover {
   background: rgba(155, 77, 255, 0.15);
-  border-color: var(--somnio-purple-bright);
+  border-color: var(--renap-purple-bright);
 }
 
 .footer-heading {
@@ -2060,7 +2060,7 @@ button:focus-visible {
 }
 
 .footer-links a:hover {
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
 }
 
 .footer-tech {
@@ -2290,7 +2290,7 @@ button:focus-visible {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--somnio-purple-bright) 0%, var(--somnio-purple) 50%, var(--somnio-deep-purple) 100%);
+  background: linear-gradient(135deg, var(--renap-purple-bright) 0%, var(--renap-purple) 50%, var(--renap-deep-purple) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2319,7 +2319,7 @@ button:focus-visible {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 3px solid var(--somnio-purple-bright);
+  border: 3px solid var(--renap-purple-bright);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2342,7 +2342,7 @@ button:focus-visible {
 
 .breath-label {
   font-size: 12px;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
   font-weight: 600;
 }
 
@@ -2437,7 +2437,7 @@ button:focus-visible {
   gap: 6px;
   font-size: 8px;
   font-weight: 600;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
 }
 
 .pdf-bars {
@@ -2451,7 +2451,7 @@ button:focus-visible {
 .pdf-bar {
   flex: 1;
   border-radius: 2px;
-  background: var(--somnio-purple-bright);
+  background: var(--renap-purple-bright);
   opacity: 0.6;
 }
 
@@ -2477,7 +2477,7 @@ button:focus-visible {
 }
 
 .watch-icon svg {
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
 }
 
 .watch-icon::before {
@@ -2557,7 +2557,7 @@ button:focus-visible {
 
 .thought-date {
   font-size: 9px;
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
   font-weight: 600;
   margin-bottom: 4px;
 }
@@ -2582,7 +2582,7 @@ button:focus-visible {
   width: 80px;
   height: 80px;
   border-radius: 22px;
-  background: linear-gradient(135deg, var(--somnio-purple-bright) 0%, var(--somnio-purple) 50%, var(--somnio-deep-purple) 100%);
+  background: linear-gradient(135deg, var(--renap-purple-bright) 0%, var(--renap-purple) 50%, var(--renap-deep-purple) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3491,7 +3491,7 @@ button:focus-visible {
 }
 
 .legal-header .text-caption {
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
 }
 
 .legal-layout {
@@ -3633,7 +3633,7 @@ button:focus-visible {
 }
 
 .legal-content a {
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
   text-decoration: underline;
   transition: color var(--transition-fast);
 }
@@ -3655,7 +3655,7 @@ button:focus-visible {
 .legal-content blockquote,
 .legal-content .legal-callout {
   background: rgba(123, 47, 190, 0.08);
-  border-left: 3px solid var(--somnio-purple-bright);
+  border-left: 3px solid var(--renap-purple-bright);
   border-radius: 0 12px 12px 0;
   padding: 16px 20px;
   margin: 20px 0;
@@ -3755,7 +3755,7 @@ button:focus-visible {
   }
 
   .legal-toc-link.active {
-    background: var(--somnio-purple-bright);
+    background: var(--renap-purple-bright);
     border-color: transparent;
     padding-left: 14px;
     box-shadow: 0 4px 12px rgba(155, 77, 255, 0.35);
@@ -3834,7 +3834,7 @@ button:focus-visible {
     transform: translate3d(-50%, -50%, 0) scale(1);
     pointer-events: none;
     color: #ffffff;
-    filter: drop-shadow(0 0 4px var(--somnio-purple-bright)) drop-shadow(0 0 10px rgba(155, 77, 255, 0.8)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(0 0 4px var(--renap-purple-bright)) drop-shadow(0 0 10px rgba(155, 77, 255, 0.8)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
     z-index: 1000000000;
     display: flex;
     align-items: center;
@@ -3854,7 +3854,7 @@ button:focus-visible {
 
   .comet-head.hovering-link {
     transform: translate3d(15px, -15px, 0) translate(-50%, -50%) scale(0.3) !important;
-    filter: drop-shadow(0 0 4px var(--somnio-purple-bright)) drop-shadow(0 0 10px rgba(155, 77, 255, 0.8));
+    filter: drop-shadow(0 0 4px var(--renap-purple-bright)) drop-shadow(0 0 10px rgba(155, 77, 255, 0.8));
   }
 
   .comet-head svg {
@@ -4001,7 +4001,7 @@ button:focus-visible {
 }
 
 .text-purple {
-  color: var(--somnio-purple-bright);
+  color: var(--renap-purple-bright);
   font-weight: 600;
 }
 
@@ -4069,7 +4069,7 @@ button:focus-visible {
 .preloader-spinner-progress {
   width: 0%;
   height: 100%;
-  background: linear-gradient(90deg, var(--somnio-purple) 0%, var(--somnio-purple-bright) 100%);
+  background: linear-gradient(90deg, var(--renap-purple) 0%, var(--renap-purple-bright) 100%);
   border-radius: 10px;
   animation: preloaderProgress 2.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   animation-delay: 0.3s;
