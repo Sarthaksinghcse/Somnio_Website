@@ -455,37 +455,55 @@ button:focus-visible {
    ============================================================ */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92vw, 840px);
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  transition: background 300ms ease;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.3),
+    0 0 60px rgba(123, 47, 190, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: background 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
   animation: navbarSlideDown 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 5, 20, 0.75);
+  border-color: rgba(155, 77, 255, 0.15);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(123, 47, 190, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
-  max-width: 100%;
+  height: 56px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 4vw;
+  padding: 0 28px;
+  gap: 36px;
 }
 
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   color: var(--text-primary);
   z-index: 1001;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-brand svg {
@@ -495,8 +513,8 @@ button:focus-visible {
 }
 
 .nav-logo {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -504,22 +522,25 @@ button:focus-visible {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
+  margin-left: auto;
 }
 
 .nav-links a {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.7);
   transition: color var(--transition-fast);
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-links a::after {
   content: '';
   position: absolute;
   bottom: -4px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 2px;
   background: var(--renap-purple-bright);
@@ -529,7 +550,7 @@ button:focus-visible {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 .nav-links a.active::after,
@@ -538,7 +559,12 @@ button:focus-visible {
 }
 
 .nav-cta {
-  margin-left: 8px;
+  margin-left: 4px;
+}
+
+.nav-cta .btn {
+  padding: 8px 20px !important;
+  font-size: 13px !important;
 }
 
 .nav-cta::after {
@@ -2175,12 +2201,12 @@ button:focus-visible {
 
 @keyframes navbarSlideDown {
   from {
-    transform: translateY(-100%);
+    transform: translateX(-50%) translateY(-100%);
     opacity: 0;
   }
 
   to {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
     opacity: 1;
   }
 }
@@ -3144,8 +3170,8 @@ button:focus-visible {
   }
 
   .nav-inner {
-    padding: 0 16px;
-    height: 64px;
+    padding: 0 20px;
+    height: 52px;
   }
 
   .nav-brand {
@@ -3853,8 +3879,8 @@ button:focus-visible {
   }
 
   .comet-head.hovering-link {
-    transform: translate3d(15px, -15px, 0) translate(-50%, -50%) scale(0.3) !important;
-    filter: drop-shadow(0 0 4px var(--renap-purple-bright)) drop-shadow(0 0 10px rgba(155, 77, 255, 0.8));
+    transform: translate3d(-50%, -50%, 0) scale(0.7) !important;
+    filter: drop-shadow(0 0 6px var(--renap-purple-bright)) drop-shadow(0 0 16px rgba(155, 77, 255, 0.9)) drop-shadow(0 0 30px rgba(155, 77, 255, 0.4));
   }
 
   .comet-head svg {

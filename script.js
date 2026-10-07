@@ -183,13 +183,10 @@
     'scroll',
     () => {
       const currentScroll = window.pageYOffset;
-
       if (currentScroll > 50) {
-        navbar.style.background = 'rgba(0, 0, 0, 0.85)';
-        navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.1)';
+        navbar.classList.add('scrolled');
       } else {
-        navbar.style.background = 'rgba(0, 0, 0, 0.7)';
-        navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.06)';
+        navbar.classList.remove('scrolled');
       }
     },
     { passive: true }
@@ -613,7 +610,7 @@
 
       // Check distance from last particle spawn to create beautiful tail spacing
       const dist = Math.hypot(headX - lastSpawnX, headY - lastSpawnY);
-      if (dist > 8 && hasMoved) {
+      if (dist > 4 && hasMoved) {
         createTailParticle(headX, headY);
         lastSpawnX = headX;
         lastSpawnY = headY;
@@ -628,30 +625,19 @@
   initCustomCursor();
 
   // ============================================================
-  // 11. COMING SOON POPUP MODAL
+  // 11. COMING SOON POPUP MODAL (Kept for notices if needed)
   // ============================================================
   function initPopupModal() {
     const modal = document.getElementById('appStoreModal');
     const closeBtn = document.getElementById('closeModalBtn');
     const okBtn = document.getElementById('modalOkBtn');
-    const badgeLinks = document.querySelectorAll('#hero-cta-primary, #download-store-link');
 
     if (!modal || !okBtn) return;
-
-    function openModal(e) {
-      e.preventDefault();
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden'; // prevent scrolling behind modal
-    }
 
     function closeModal() {
       modal.classList.remove('open');
       document.body.style.overflow = ''; // restore scrolling
     }
-
-    badgeLinks.forEach(link => {
-      link.addEventListener('click', openModal);
-    });
 
     if (closeBtn) {
       closeBtn.addEventListener('click', closeModal);
